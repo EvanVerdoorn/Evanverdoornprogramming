@@ -52,3 +52,35 @@ let inTrain = false;
 
 if (purchasedBook == true && job == "teacher" && inTrain == true) {console.log("finally I can enjoy my book")}
 else {console.log("I can't enjoy my book")}
+
+//loop opdracht 1
+
+
+for (let i = 1; i <= 25; i++) {
+    let a = i % 4;
+    if (a == 0) {
+        console.log(i)
+    }
+}
+
+//loop opdracht 2
+
+let b = 0;
+let c = 1;
+while(b < 35) {
+    c = (c+b);
+    console.log(c)
+    b = b+c;
+    console.log(b)
+}
+
+//loop opdracht 3
+
+let numbers = [ 2, 4, 8, 9, 12, 15];
+let total = 0;
+for (let i in numbers) {
+    total += numbers[i];
+    
+}
+console.log(total);
+
