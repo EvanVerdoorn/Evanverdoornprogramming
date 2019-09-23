@@ -51,4 +51,4 @@ let job = "teacher";
 let inTrain = false;
 
 if (purchasedBook == true && job == "teacher" && inTrain == true) {console.log("finally I can enjoy my book")}
-
+else {console.log("I can't enjoy my book")}
