@@ -169,3 +169,200 @@ function expressionAndDeclaration() {
 }
 
 //dit werkt niet, want de var wordt wel door hoisting bovenaan gezet, maar het neemt de text niet mee.
+
+let productlist = [
+    {
+        productName: "tandenborstel",
+        productPrice: 2.19
+    },
+    {
+        productName: "bakmeel",
+        productPrice: 0.79
+    },
+    {
+        productName: "wortels",
+        productPrice: 1.10
+    }
+]
+
+
+productlist[0] = "tandenborstel";
+productlist[1] = "deodorant";
+productlist[2] = "bakmeel";
+productlist[3] = "wortels";
+productlist[4] = "tandpasta";
+productlist[5] = "krop sla";
+productlist[6] = "maggi";
+productlist[7] = "croky chips";
+productlist[8] = "wc papier";
+productlist[9] = "shampoo";
+
+
+
+productlist.forEach(function (val, index, arr) {
+    console.log(`On ${index} value is ${val}`);
+});
+
+for (let i = 0; i < productlist.length; i++) {
+    const element = productlist[i];
+    //console.log(element);
+    console.log(productlist[i]);
+}
+
+const newProductsArray = productlist.map((val, index, arr) => {
+    return `Product ${index}: ${val}`;
+
+})
+
+console.table(newProductsArray);
+
+const productPrices = [2.10, 4.99, 5.60, 0.40, 5.44, 7.33, 2.33, 2.49, 2.10];
+
+function sumTotalPrice() {
+    let output = 0;
+    productPrices.forEach(function (val) {
+        output += val;
+    });
+    return output;
+}
+
+const totalPrice = sumTotalPrice();
+
+console.log(totalPrice);
+
+const average = function (anArray) {
+    let newAverage = sumTotalPrice(anArray) / anArray.length;
+    return newAverage;
+}
+
+console.log(average(productPrices));
+
+//opdracht arrays 1
+
+const lapRounds = [2.99, 3.00, 3.01, 4.01, 2.79, 2.88, 3.10, 4.12];
+
+function randomElement(lapRounds) {
+
+    return lapRounds[Math.floor(Math.random() * lapRounds.length)];
+
+}
+
+console.log(randomElement(lapRounds));
+
+//opdracht arrays 2
+
+const allMyRecords = [
+    ["The Who - Pinball Wizard", "Rolling Stones - Exile on main street", "Police - Message in a bottle"],
+    ["De Dijk - Alle 40 Goed", "Het Goede Doel - Belgie", "Doe Maar - skunk"]
+];
+console.log(allMyRecords[0][0]);
+console.log(allMyRecords[0][1]);
+console.log(allMyRecords[0][2]);
+console.log(allMyRecords[1][0]);
+console.log(allMyRecords[1][1]);
+console.log(allMyRecords[1][2]);
+
+//opdracht arrays 3
+
+
+const filteredLapRoundsWithForLoop = function () {
+    let newArray = [];
+    for (let i = 0; i < lapRounds.length; i++) {
+
+        if (lapRounds[i] < 4) {
+            newArray.push(lapRounds[i]);
+        }
+    }
+    return newArray;
+}
+
+
+
+
+let me = {
+    name: "Evan Verdoorn",
+    age: "18",
+    previousDiploma: "Havo",
+    petNames: ["Floyd", "Flint", "Lemmy", "Snufje", "woef"],
+    favoriteVehicle: {
+        favoriteVehicleOne: "auto",
+        favoriteVehicleTwo: "fiets"
+    },
+    myNewFunction: function () { },
+    newAllFunction: function allAssign() {
+        console.log(`Mijn favoriete vervoersmiddel is de ${me.favoriteVehicle.favoriteVehicleOne} en hij heeft 4 wielen`)
+    
+        me.petNames.forEach(function (value, index, arr) {
+            console.log(value);
+        })
+    }
+    
+
+}
+
+me.newAllFunction()
+
+
+
+
+
+console.log(me);
+
+me.currentStudy = "Hbo";
+
+let productlijst = [
+    {
+        productName: "tandenborstel",
+        productPrice: 2.19
+    },
+    {
+        productName: "bakmeel",
+        productPrice: 0.79
+    },
+    {
+        productName: "wortels",
+        productPrice: 1.10
+    }
+];
+let totaal = 0;
+productlijst.forEach(function (value, index, arr) {
+    totaal += value.productPrice;
+});
+
+console.log(totaal);
+
+//opdracht 1 objects
+
+let lapRoundes = {
+    lapRoundOne: 55.99,
+    lapRoundTwo: 63.00,
+    lapRoundThree: 63.01,
+    lapRoundFour: 54.01,
+    lapRoundFive: 62.79,
+    lapRoundSix: 52.88,
+    lapRoundSeven: 53.10,
+    lapRoundEight: 54.12
+}
+
+console.log(lapRoundes);
+
+//opdracht 2 objects
+
+const teachers = [
+    {
+        name: "Loek",
+        profession: "Teacher",
+        brand: "Linux"
+    },
+    {
+        name: "Daan",
+        profession: "Teacher",
+        brand: "Arduino"
+    },
+    {
+        name: "Rimmert",
+        profession: "Teacher",
+        brand: "Apple"
+    }
+]
+
